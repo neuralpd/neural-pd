@@ -1,0 +1,572 @@
+{
+  "scenes": [
+    {
+      "id": "bottle",
+      "label": "Bottle impact",
+      "description": "A bottle under impact. Inspect the motion, fragment separation, and damage distribution.",
+      "examples": [
+        {
+          "id": "0041",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/comparisons/bottle_0041_gt.mp4",
+              "poster": "videos/posters/bottle_0041_gt.jpg",
+              "frames": 32,
+              "fps": 15.0,
+              "duration": 2.1333333333333333,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 10,
+              "original": {
+                "src": "videos/bottle_0041_gt.mp4",
+                "frames": 56,
+                "duration": 3.733333,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/comparisons/bottle_0041_ours.mp4",
+              "poster": "videos/posters/bottle_0041_ours.jpg",
+              "frames": 32,
+              "fps": 15.0,
+              "duration": 2.1333333333333333,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 10,
+              "original": {
+                "src": "videos/bottle_0041_ours.mp4",
+                "frames": 56,
+                "duration": 3.733333,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "intnet",
+              "label": "InteractionNet",
+              "src": "videos/bottle_0041_intnet.mp4",
+              "poster": "videos/posters/bottle_0041_intnet.jpg",
+              "frames": 32,
+              "fps": 15.0,
+              "duration": 2.1333333333333333,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 10,
+              "original": {
+                "src": "videos/bottle_0041_intnet.mp4",
+                "frames": 32,
+                "duration": 2.133333,
+                "firstFrame": 10
+              }
+            },
+            {
+              "method": "3dgsim",
+              "label": "3DGSIM",
+              "src": "videos/bottle_0041_3dgsim.mp4",
+              "poster": "videos/posters/bottle_0041_3dgsim.jpg",
+              "frames": 32,
+              "fps": 15.0,
+              "duration": 2.1333333333333333,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 10,
+              "original": {
+                "src": "videos/bottle_0041_3dgsim.mp4",
+                "frames": 32,
+                "duration": 2.133333,
+                "firstFrame": 10
+              }
+            },
+            {
+              "method": "sgnn",
+              "label": "SGNN",
+              "src": "videos/bottle_0041_sgnn.mp4",
+              "poster": "videos/posters/bottle_0041_sgnn.jpg",
+              "frames": 32,
+              "fps": 15.0,
+              "duration": 2.1333333333333333,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 10,
+              "original": {
+                "src": "videos/bottle_0041_sgnn.mp4",
+                "frames": 32,
+                "duration": 2.133333,
+                "firstFrame": 10
+              }
+            }
+          ],
+          "frameStart": 10,
+          "frameEnd": 41,
+          "comparisonFrames": 32
+        },
+        {
+          "id": "0063",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/bottle_0063_gt.mp4",
+              "poster": "videos/posters/bottle_0063_gt.jpg",
+              "frames": 56,
+              "fps": 15.0,
+              "duration": 3.7333333333333334,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/bottle_0063_gt.mp4",
+                "frames": 56,
+                "duration": 3.733333,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/bottle_0063_ours.mp4",
+              "poster": "videos/posters/bottle_0063_ours.jpg",
+              "frames": 56,
+              "fps": 15.0,
+              "duration": 3.7333333333333334,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/bottle_0063_ours.mp4",
+                "frames": 56,
+                "duration": 3.733333,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 55,
+          "comparisonFrames": 56
+        }
+      ]
+    },
+    {
+      "id": "ball",
+      "label": "Ball\u2013plate impact",
+      "description": "A ball impacts a plate at different locations. Inspect the local response and the spread of damage.",
+      "examples": [
+        {
+          "id": "0093",
+          "clips": [
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/comparisons/ball_0093_ours.mp4",
+              "poster": "videos/posters/ball_0093_ours.jpg",
+              "frames": 30,
+              "fps": 15.0,
+              "duration": 2.0,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ball_0093_ours.mp4",
+                "frames": 33,
+                "duration": 2.2,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "intnet",
+              "label": "InteractionNet",
+              "src": "videos/ball_0093_intnet.mp4",
+              "poster": "videos/posters/ball_0093_intnet.jpg",
+              "frames": 30,
+              "fps": 15.0,
+              "duration": 2.0,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ball_0093_intnet.mp4",
+                "frames": 30,
+                "duration": 2.0,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "3dgsim",
+              "label": "3DGSIM",
+              "src": "videos/comparisons/ball_0093_3dgsim.mp4",
+              "poster": "videos/posters/ball_0093_3dgsim.jpg",
+              "frames": 30,
+              "fps": 15.0,
+              "duration": 2.0,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ball_0093_3dgsim.mp4",
+                "frames": 33,
+                "duration": 2.2,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "sgnn",
+              "label": "SGNN",
+              "src": "videos/comparisons/ball_0093_sgnn.mp4",
+              "poster": "videos/posters/ball_0093_sgnn.jpg",
+              "frames": 30,
+              "fps": 15.0,
+              "duration": 2.0,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ball_0093_sgnn.mp4",
+                "frames": 32,
+                "duration": 2.133333,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 29,
+          "comparisonFrames": 30
+        },
+        {
+          "id": "0090",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/ball_0090_gt.mp4",
+              "poster": "videos/posters/ball_0090_gt.jpg",
+              "frames": 33,
+              "fps": 15.0,
+              "duration": 2.2,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ball_0090_gt.mp4",
+                "frames": 33,
+                "duration": 2.2,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/ball_0090_ours.mp4",
+              "poster": "videos/posters/ball_0090_ours.jpg",
+              "frames": 33,
+              "fps": 15.0,
+              "duration": 2.2,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ball_0090_ours.mp4",
+                "frames": 33,
+                "duration": 2.2,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 32,
+          "comparisonFrames": 33
+        },
+        {
+          "id": "0094",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/ball_0094_gt.mp4",
+              "poster": "videos/posters/ball_0094_gt.jpg",
+              "frames": 33,
+              "fps": 15.0,
+              "duration": 2.2,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ball_0094_gt.mp4",
+                "frames": 33,
+                "duration": 2.2,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/ball_0094_ours.mp4",
+              "poster": "videos/posters/ball_0094_ours.jpg",
+              "frames": 33,
+              "fps": 15.0,
+              "duration": 2.2,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ball_0094_ours.mp4",
+                "frames": 33,
+                "duration": 2.2,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 32,
+          "comparisonFrames": 33
+        }
+      ]
+    },
+    {
+      "id": "mug",
+      "label": "Mug drop",
+      "description": "A mug drops onto a surface. Inspect the deformation, contact response, and damage evolution.",
+      "examples": [
+        {
+          "id": "0014",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/comparisons/mug_0014_gt.mp4",
+              "poster": "videos/posters/mug_0014_gt.jpg",
+              "frames": 23,
+              "fps": 15.0,
+              "duration": 1.5333333333333334,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 10,
+              "original": {
+                "src": "videos/mug_0014_gt.mp4",
+                "frames": 33,
+                "duration": 2.2,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/comparisons/mug_0014_ours.mp4",
+              "poster": "videos/posters/mug_0014_ours.jpg",
+              "frames": 23,
+              "fps": 15.0,
+              "duration": 1.5333333333333334,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 10,
+              "original": {
+                "src": "videos/mug_0014_ours.mp4",
+                "frames": 33,
+                "duration": 2.2,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "intnet",
+              "label": "InteractionNet",
+              "src": "videos/comparisons/mug_0014_intnet.mp4",
+              "poster": "videos/posters/mug_0014_intnet.jpg",
+              "frames": 23,
+              "fps": 15.0,
+              "duration": 1.5333333333333334,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 10,
+              "original": {
+                "src": "videos/mug_0014_intnet.mp4",
+                "frames": 32,
+                "duration": 2.133333,
+                "firstFrame": 10
+              }
+            },
+            {
+              "method": "3dgsim",
+              "label": "3DGSIM",
+              "src": "videos/comparisons/mug_0014_3dgsim.mp4",
+              "poster": "videos/posters/mug_0014_3dgsim.jpg",
+              "frames": 23,
+              "fps": 15.0,
+              "duration": 1.5333333333333334,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 10,
+              "original": {
+                "src": "videos/mug_0014_3dgsim.mp4",
+                "frames": 32,
+                "duration": 2.133333,
+                "firstFrame": 10
+              }
+            },
+            {
+              "method": "sgnn",
+              "label": "SGNN",
+              "src": "videos/comparisons/mug_0014_sgnn.mp4",
+              "poster": "videos/posters/mug_0014_sgnn.jpg",
+              "frames": 23,
+              "fps": 15.0,
+              "duration": 1.5333333333333334,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 10,
+              "original": {
+                "src": "videos/mug_0014_sgnn.mp4",
+                "frames": 32,
+                "duration": 2.133333,
+                "firstFrame": 10
+              }
+            }
+          ],
+          "frameStart": 10,
+          "frameEnd": 32,
+          "comparisonFrames": 23
+        },
+        {
+          "id": "0266",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/mug_0266_gt.mp4",
+              "poster": "videos/posters/mug_0266_gt.jpg",
+              "frames": 33,
+              "fps": 15.0,
+              "duration": 2.2,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/mug_0266_gt.mp4",
+                "frames": 33,
+                "duration": 2.2,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/mug_0266_ours.mp4",
+              "poster": "videos/posters/mug_0266_ours.jpg",
+              "frames": 33,
+              "fps": 15.0,
+              "duration": 2.2,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/mug_0266_ours.mp4",
+                "frames": 33,
+                "duration": 2.2,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 32,
+          "comparisonFrames": 33
+        }
+      ]
+    },
+    {
+      "id": "cloth",
+      "label": "Cloth fall",
+      "description": "A cloth falls over obstacles. Inspect the evolving shape and the spatial distribution of damage.",
+      "examples": [
+        {
+          "id": "0832",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/cloth_0832_gt.mp4",
+              "poster": "videos/posters/cloth_0832_gt.jpg",
+              "frames": 71,
+              "fps": 15.0,
+              "duration": 4.733333333333333,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/cloth_0832_gt.mp4",
+                "frames": 71,
+                "duration": 4.733333,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/cloth_0832_ours.mp4",
+              "poster": "videos/posters/cloth_0832_ours.jpg",
+              "frames": 71,
+              "fps": 15.0,
+              "duration": 4.733333333333333,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/cloth_0832_ours.mp4",
+                "frames": 71,
+                "duration": 4.733333,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 70,
+          "comparisonFrames": 71
+        },
+        {
+          "id": "0834",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/cloth_0834_gt.mp4",
+              "poster": "videos/posters/cloth_0834_gt.jpg",
+              "frames": 71,
+              "fps": 15.0,
+              "duration": 4.733333333333333,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/cloth_0834_gt.mp4",
+                "frames": 71,
+                "duration": 4.733333,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/cloth_0834_ours.mp4",
+              "poster": "videos/posters/cloth_0834_ours.jpg",
+              "frames": 71,
+              "fps": 15.0,
+              "duration": 4.733333333333333,
+              "width": 1280,
+              "height": 720,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/cloth_0834_ours.mp4",
+                "frames": 71,
+                "duration": 4.733333,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 70,
+          "comparisonFrames": 71
+        }
+      ]
+    }
+  ]
+}
