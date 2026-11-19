@@ -1,106 +1,105 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<meta name="referrer" content="no-referrer">
-<title>Neural-PD: A Peridynamics-Inspired Neural Simulator for 3D Fracture Dynamics</title>
-<link rel="stylesheet" href="static/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Anonymous qualitative results for Neural-PD: a peridynamics-inspired neural simulator for 3D fracture dynamics.">
+  <title>Neural-PD · Qualitative Results</title>
+  <link rel="stylesheet" href="static/style.css">
+  <script src="static/main.js" defer></script>
 </head>
 <body>
-
-<header class="hero">
-  <div class="wrap center">
-    <h1 class="rise">Neural-PD: A Peridynamics-Inspired Neural Simulator for 3D Fracture Dynamics</h1>
-    <p class="authors rise d1">Anonymous Authors</p>
-    <p class="venue rise d2">Paper under double-blind review</p>
-    <nav class="links rise d3" aria-label="Paper links">
-      <!-- Replace each "#" with the real anonymous link -->
-      <a class="pill" href="#">Paper</a>
-      <a class="pill" href="#">Supplementary</a>
-      <a class="pill" href="#">Code</a>
-      <a class="pill" href="#">Dataset</a>
+  <a class="skip-link" href="#results">Skip to comparisons</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#">Neural<span>-PD</span></a>
+    <nav aria-label="Page sections">
+      <a href="#results">Comparisons</a>
+      <a href="#viewing-notes">Viewing notes</a>
+      <a href="#citation">Citation</a>
     </nav>
-  </div>
-</header>
+    <span class="review-label">Anonymous submission</span>
+  </header>
 
-<section class="teaser rise d4">
-  <figure class="wrap">
-    <div class="slot wide" data-src="videos/teaser.mp4"></div>
-    <figcaption>[One sentence: what the teaser shows.]</figcaption>
-  </figure>
-</section>
+  <main>
+    <section class="hero wrap" aria-labelledby="paper-title">
+      <p class="eyebrow">Qualitative visualization results</p>
+      <h1 id="paper-title">Neural-PD: A Peridynamics-Inspired Neural Simulator for 3D Fracture Dynamics</h1>
+      <p class="authors">Anonymous Authors <span aria-hidden="true">·</span> Paper under double-blind review</p>
+      <p class="hero-intro">Explore motion, deformation, and damage across four scenes. Compare Neural-PD with ground truth and baseline models, one example at a time.</p>
+      <div class="scene-overview" id="scene-overview" aria-label="Explore the scenes"></div>
+      <div class="overview-caption"><span>Neural-PD predictions</span><span>4 scenes <span aria-hidden="true">/</span> 9 examples <span aria-hidden="true">/</span> 26 videos</span></div>
+    </section>
 
-<section class="band reveal">
-  <div class="wrap narrow">
-    <h2>Abstract</h2>
-    <p class="abstract">[Paste the paper abstract here.]</p>
-  </div>
-</section>
-
-<section class="block reveal" id="results">
-  <div class="wrap">
-    <div class="head">
-      <h2>Rollout Comparisons</h2>
-      <p>Same initial state and number of steps for every method. Videos play in sync.</p>
-    </div>
-    <div class="tabs" role="tablist" aria-label="Dataset"></div>
-    <div class="panels"></div>
-  </div>
-</section>
-
-<section class="block reveal" id="fracture">
-  <div class="wrap">
-    <div class="head">
-      <h2>Fracture Evolution</h2>
-      <p>Bond damage over the rollout, from intact to fully broken. Drag across the video to compare.</p>
-    </div>
-    <figure class="compare-fig">
-      <div class="compare" style="--split: 50%">
-        <div class="slot fill" data-src="videos/damage_ours.mp4"></div>
-        <div class="top"><div class="slot fill" data-src="videos/damage_gt.mp4"></div></div>
-        <span class="tag left">Ground truth</span>
-        <span class="tag right">Neural-PD (ours)</span>
-        <div class="divider" aria-hidden="true"><span class="handle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-5 5 5 5"/><path d="M15 7l5 5-5 5"/></svg></span></div>
-        <input type="range" min="0" max="100" value="50" aria-label="Compare ground truth and Neural-PD">
+    <section class="results-section" id="results" aria-labelledby="results-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="eyebrow">Explore the rollouts</p><h2 id="results-title">Qualitative comparisons</h2></div>
+          <p>Select a scene, choose an example,<br class="desktop-break"> and inspect the results together.</p>
+        </div>
+        <div class="scene-tabs" id="scene-tabs" role="tablist" aria-label="Scene"></div>
+        <p id="load-status" class="load-status" role="status">Loading comparisons…</p>
+        <section id="result-panel" class="result-panel" role="tabpanel" aria-label="Selected scene" hidden>
+          <div class="example-heading">
+            <div><h3 id="scene-title"></h3><p id="scene-description"></p></div>
+            <div class="example-picker"><span class="field-label">Example</span><div id="examples" role="group" aria-label="Example"></div></div>
+          </div>
+          <div class="viewer" id="viewer">
+            <div class="viewer-toolbar">
+              <div class="transport-buttons">
+                <button type="button" class="button button-primary" id="play-pause" disabled>Play all</button>
+                <button type="button" class="button" id="restart" disabled>Restart</button>
+                <span class="playback-rate">1× playback</span>
+              </div>
+              <button type="button" class="button overlay-toggle" id="overlay-toggle" aria-pressed="false" hidden>Overlay GT / Neural-PD</button>
+            </div>
+            <div class="timeline">
+              <label class="field-label" for="timeline">Rendered frame</label>
+              <input id="timeline" type="range" min="0" max="1" value="0" step="1" disabled aria-label="Rendered frame">
+              <output id="frame-output" for="timeline">— / —</output>
+            </div>
+            <p class="availability-note" id="availability-note" hidden></p>
+            <div class="primary-grid" id="primary-grid"></div>
+            <div class="overlay-controls" id="overlay-controls" hidden>
+              <span>Ground truth</span><input id="overlay-split" type="range" min="0" max="100" value="50" aria-label="Ground truth and Neural-PD split"><span>Neural-PD <strong>(ours)</strong></span>
+            </div>
+            <div class="baseline-heading" id="baseline-heading" hidden><h4>Baseline comparisons</h4><span>Same example · same frame window · 1×</span></div>
+            <div class="baseline-grid" id="baseline-grid"></div>
+            <div class="viewer-footnote"><span id="playback-note"></span><span class="damage-key">Damage <i aria-hidden="true"></i> Low to high</span></div>
+            <p class="playback-status" id="playback-status" role="status"></p>
+          </div>
+        </section>
+        <noscript><p>Enable JavaScript to select examples and use synchronized playback. The videos are also available in the <a href="videos/">videos directory</a>.</p></noscript>
       </div>
-      <figcaption>Ground truth (left) and Neural-PD (right), played in sync on the same scene.</figcaption>
-    </figure>
-    <div class="scale" aria-hidden="true"><span>Intact</span><i></i><span>Broken</span></div>
-  </div>
-</section>
+    </section>
 
-<section class="block reveal" id="limitations">
-  <div class="wrap">
-    <div class="head">
-      <h2>Limitations</h2>
-      <p>Cases where the prediction drifts from ground truth.</p>
-    </div>
-    <div class="grid three">
-      <figure><div class="slot" data-src="videos/failure_1.mp4"></div><figcaption>[Failure case 1: what goes wrong]</figcaption></figure>
-      <figure><div class="slot" data-src="videos/failure_2.mp4"></div><figcaption>[Failure case 2: what goes wrong]</figcaption></figure>
-      <figure><div class="slot" data-src="videos/failure_3.mp4"></div><figcaption>[Failure case 3: what goes wrong]</figcaption></figure>
-    </div>
-  </div>
-</section>
+    <section class="notes-section wrap" id="viewing-notes" aria-labelledby="notes-title">
+      <div><p class="eyebrow">Reading the results</p><h2 id="notes-title">A closer look at dynamics</h2></div>
+      <div class="notes-copy">
+        <p>Compare object motion and shape alongside the color-coded damage field. Use the shared timeline to step through the exported clips, pause to inspect a transition, or expand a video for a closer view.</p>
+        <p>Every method in an example shows the same overlapping range of rendered frame numbers at 1× speed. Comparison clips preserve the selected source frames without padding, interpolation, or time stretching. The full original clips are available in the expanded view. Matching the frame numbers printed in the renders does not independently verify simulation-time alignment. Only the methods supplied for each example are shown.</p>
+      </div>
+    </section>
 
-<section class="block reveal" id="bibtex">
-  <div class="wrap">
-    <h2 class="left-h">BibTeX</h2>
-<pre>@inproceedings{anonymous2027neuralpd,
-  title     = {Neural-PD: A Peridynamics-Inspired Neural Simulator for 3D Fracture Dynamics},
+    <section class="citation-section wrap" id="citation" aria-labelledby="citation-title">
+      <div><p class="eyebrow">Paper under review</p><h2 id="citation-title">Citation</h2></div>
+      <pre><code>@inproceedings{anonymous2027neuralpd,
+  title     = {Neural-PD: A Peridynamics-Inspired Neural Simulator
+               for 3D Fracture Dynamics},
   author    = {Anonymous},
   booktitle = {Under review},
   year      = {2027}
-}</pre>
-  </div>
-</section>
+}</code></pre>
+    </section>
+  </main>
 
-<footer>
-  <p>This page is anonymized for double-blind review and uses no analytics, cookies or third-party embeds.</p>
-</footer>
+  <footer class="wrap"><span class="wordmark">Neural<span>-PD</span></span><p>Anonymized for double-blind review.<br>No analytics, cookies, or third-party embeds.</p><a href="#paper-title">Back to top</a></footer>
 
-<script src="static/main.js"></script>
+  <dialog id="video-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-heading"><h2 id="dialog-title">Expanded video</h2><button class="button" id="close-dialog" type="button" autofocus>Close</button></div>
+    <video id="expanded-video" controls muted playsinline preload="metadata"></video>
+    <p>Matched comparison window · 1× playback. <a id="original-video-link" target="_blank" rel="noopener noreferrer">Open full original clip</a></p>
+  </dialog>
 </body>
 </html>
