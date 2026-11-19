@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Anonymous qualitative results for Neural-PD: a peridynamics-inspired neural simulator for 3D fracture dynamics.">
+  <title>Neural-PD · Qualitative Results</title>
+  <link rel="stylesheet" href="static/style.css">
+  <script src="static/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#results">Skip to comparisons</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#">Neural<span>-PD</span></a>
+    <nav aria-label="Page sections">
+      <a href="#results">Comparisons</a>
+      <a href="#generalization">Generalization</a>
+      <a href="#citation">Citation</a>
+    </nav>
+    <span class="review-label">Anonymous submission</span>
+  </header>
+
+  <main>
+    <section class="hero wrap" aria-labelledby="paper-title">
+      <p class="eyebrow">Qualitative visualization results</p>
+      <h1 id="paper-title">Neural-PD: A Peridynamics-Inspired Neural Simulator for 3D Fracture Dynamics</h1>
+      <p class="authors">Anonymous Authors <span aria-hidden="true">·</span> Paper under double-blind review</p>
+      <p class="hero-intro">Compare Neural-PD with ground truth and baseline models across four scenes, then explore its generalization to three scenarios excluded from training.</p>
+      <div class="scene-overview" id="scene-overview" aria-label="Explore the scenes"></div>
+      <div class="overview-caption"><span>Neural-PD predictions</span><span id="overview-counts">4 scenes / 9 examples / 29 videos</span></div>
+    </section>
+
+    <section class="results-section" id="results" aria-labelledby="results-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="eyebrow">Explore the rollouts</p><h2 id="results-title">Qualitative comparisons</h2></div>
+          <p>Select a scene, choose an example,<br class="desktop-break"> and inspect the results together.</p>
+        </div>
+        <div class="scene-tabs" id="scene-tabs" role="tablist" aria-label="Scene"></div>
+        <p id="load-status" class="load-status" role="status">Loading comparisons…</p>
+        <section id="result-panel" class="result-panel" role="tabpanel" aria-label="Selected scene" hidden>
+          <div class="example-heading">
+            <div><h3 id="scene-title"></h3><p id="scene-description"></p></div>
+            <div class="example-picker"><span class="field-label">Example</span><div id="examples" role="group" aria-label="Example"></div></div>
+          </div>
+          <div class="viewer" id="viewer">
+            <div class="viewer-toolbar">
+              <div class="transport-buttons">
+                <button type="button" class="button button-primary" id="play-pause" disabled>Play all</button>
+                <button type="button" class="button" id="restart" disabled>Restart</button>
+                <span class="playback-rate">1× playback</span>
+              </div>
+              <button type="button" class="button overlay-toggle" id="overlay-toggle" aria-pressed="false" hidden>Overlay GT / Neural-PD</button>
+            </div>
+            <div class="timeline">
+              <label class="field-label" for="timeline">Rendered frame</label>
+              <input id="timeline" type="range" min="0" max="1" value="0" step="1" disabled aria-label="Rendered frame">
+              <output id="frame-output" for="timeline">— / —</output>
+            </div>
+            <p class="availability-note" id="availability-note" hidden></p>
+            <div class="primary-grid" id="primary-grid"></div>
+            <div class="overlay-controls" id="overlay-controls" hidden>
+              <span>Ground truth</span><input id="overlay-split" type="range" min="0" max="100" value="50" aria-label="Ground truth and Neural-PD split"><span>Neural-PD <strong>(ours)</strong></span>
+            </div>
+            <div class="baseline-heading" id="baseline-heading" hidden><h4>Baseline comparisons</h4><span>Same example · same frame window · 1×</span></div>
+            <div class="baseline-grid" id="baseline-grid"></div>
+            <div class="viewer-footnote"><span id="playback-note"></span><span class="damage-key">Damage <i aria-hidden="true"></i> Low to high</span></div>
+            <p class="playback-status" id="playback-status" role="status"></p>
+          </div>
+        </section>
+        <noscript><p>Enable JavaScript to select examples and use synchronized playback. The videos are also available in the <a href="videos/">videos directory</a>.</p></noscript>
+      </div>
+    </section>
+
+    <section class="generalization-section" id="generalization" aria-labelledby="generalization-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="eyebrow">Unseen during training</p><h2 id="generalization-title">Out-of-distribution generalization</h2></div>
+          <p>3 scenarios · 6 examples<br class="desktop-break"> Neural-PD compared with ground truth</p>
+        </div>
+        <p class="generalization-intro">Cube–Plate, Ellipsoid–Plate, and Mug–Bullet were not included in training. These qualitative rollouts evaluate Neural-PD on previously unseen geometry and interaction scenarios.</p>
+        <div class="scene-tabs" id="ood-scene-tabs" role="tablist" aria-label="Unseen scenario"></div>
+        <p id="ood-load-status" class="load-status" role="status">Loading generalization examples…</p>
+        <section id="ood-result-panel" role="tabpanel" aria-label="Selected unseen scenario" hidden>
+          <div class="example-heading">
+            <div><h3 id="ood-scene-title"></h3><p id="ood-scene-description"></p></div>
+            <div class="example-picker"><span class="field-label">Example</span><div id="ood-examples" class="example-buttons" role="group" aria-label="Unseen scenario example"></div></div>
+          </div>
+          <div class="viewer" id="ood-viewer">
+            <div class="viewer-toolbar">
+              <div class="transport-buttons">
+                <button type="button" class="button button-primary" id="ood-play-pause" disabled>Play all</button>
+                <button type="button" class="button" id="ood-restart" disabled>Restart</button>
+                <span class="playback-rate">1× playback</span>
+              </div>
+              <button type="button" class="button overlay-toggle" id="ood-overlay-toggle" aria-pressed="false">Overlay GT / Neural-PD</button>
+            </div>
+            <div class="timeline">
+              <label class="field-label" for="ood-timeline">Video frame</label>
+              <input id="ood-timeline" type="range" min="0" max="1" value="0" step="1" disabled aria-label="Video frame">
+              <output id="ood-frame-output" for="ood-timeline">— / —</output>
+            </div>
+            <div class="primary-grid" id="ood-primary-grid"></div>
+            <div class="overlay-controls" id="ood-overlay-controls" hidden>
+              <span>Ground truth</span><input id="ood-overlay-split" type="range" min="0" max="100" value="50" aria-label="Unseen scenario ground truth and Neural-PD split"><span>Neural-PD <strong>(ours)</strong></span>
+            </div>
+            <div class="viewer-footnote"><span id="ood-playback-note"></span><span class="damage-key">Damage <i aria-hidden="true"></i> Low to high</span></div>
+            <p class="playback-status" id="ood-playback-status" role="status"></p>
+          </div>
+        </section>
+        <p class="generalization-caption">Each pair keeps the complete exported video sequence and original 24 fps timing. The slider counts video frames; simulation steps or frame labels remain visible inside the renders.</p>
+        <noscript><p>Enable JavaScript to explore the prediction/reference pairs.</p></noscript>
+      </div>
+    </section>
+
+    <section class="citation-section wrap" id="citation" aria-labelledby="citation-title">
+      <div><p class="eyebrow">Paper under review</p><h2 id="citation-title">Citation</h2></div>
+      <pre><code>@inproceedings{anonymous2027neuralpd,
+  title     = {Neural-PD: A Peridynamics-Inspired Neural Simulator
+               for 3D Fracture Dynamics},
+  author    = {Anonymous},
+  booktitle = {Under review},
+  year      = {2027}
+}</code></pre>
+    </section>
+  </main>
+
+  <footer class="wrap"><span class="wordmark">Neural<span>-PD</span></span><p>Anonymized for double-blind review.<br>No analytics, cookies, or third-party embeds.</p><a href="#paper-title">Back to top</a></footer>
+
+  <dialog id="video-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-heading"><h2 id="dialog-title">Expanded video</h2><button class="button" id="close-dialog" type="button" autofocus>Close</button></div>
+    <video id="expanded-video" controls muted playsinline preload="metadata"></video>
+    <p><span id="dialog-playback-note">Matched comparison window · 1× playback.</span> <a id="original-video-link" target="_blank" rel="noopener noreferrer">Open full original clip</a></p>
+  </dialog>
+</body>
+</html>

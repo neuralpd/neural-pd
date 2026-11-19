@@ -1,0 +1,291 @@
+{
+  "evaluation": "out-of-distribution",
+  "frameKind": "video",
+  "scenes": [
+    {
+      "id": "cube-plate",
+      "label": "Cube\u2013Plate",
+      "description": "A cube impacts a plate. Compare the contact response and evolving damage field.",
+      "examples": [
+        {
+          "id": "001",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/ood/cube-plate_001_gt.mp4",
+              "poster": "videos/ood/posters/cube-plate_001_gt.jpg",
+              "frames": 234,
+              "fps": 24.0,
+              "duration": 9.75,
+              "width": 1920,
+              "height": 1080,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ood/cube-plate_001_gt.mp4",
+                "frames": 234,
+                "duration": 9.75,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/ood/cube-plate_001_ours.mp4",
+              "poster": "videos/ood/posters/cube-plate_001_ours.jpg",
+              "frames": 234,
+              "fps": 24.0,
+              "duration": 9.75,
+              "width": 1920,
+              "height": 1080,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ood/cube-plate_001_ours.mp4",
+                "frames": 234,
+                "duration": 9.75,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 233,
+          "comparisonFrames": 234
+        },
+        {
+          "id": "003",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/ood/cube-plate_003_gt.mp4",
+              "poster": "videos/ood/posters/cube-plate_003_gt.jpg",
+              "frames": 234,
+              "fps": 24.0,
+              "duration": 9.75,
+              "width": 1920,
+              "height": 1080,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ood/cube-plate_003_gt.mp4",
+                "frames": 234,
+                "duration": 9.75,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/ood/cube-plate_003_ours.mp4",
+              "poster": "videos/ood/posters/cube-plate_003_ours.jpg",
+              "frames": 234,
+              "fps": 24.0,
+              "duration": 9.75,
+              "width": 1920,
+              "height": 1080,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ood/cube-plate_003_ours.mp4",
+                "frames": 234,
+                "duration": 9.75,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 233,
+          "comparisonFrames": 234
+        }
+      ]
+    },
+    {
+      "id": "ellipsoid-plate",
+      "label": "Ellipsoid\u2013Plate",
+      "description": "An ellipsoid impacts a plate. Inspect the predicted motion and damage around the impact.",
+      "examples": [
+        {
+          "id": "001",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/ood/ellipsoid-plate_001_gt.mp4",
+              "poster": "videos/ood/posters/ellipsoid-plate_001_gt.jpg",
+              "frames": 234,
+              "fps": 24.0,
+              "duration": 9.75,
+              "width": 1920,
+              "height": 1080,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ood/ellipsoid-plate_001_gt.mp4",
+                "frames": 234,
+                "duration": 9.75,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/ood/ellipsoid-plate_001_ours.mp4",
+              "poster": "videos/ood/posters/ellipsoid-plate_001_ours.jpg",
+              "frames": 234,
+              "fps": 24.0,
+              "duration": 9.75,
+              "width": 1920,
+              "height": 1080,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ood/ellipsoid-plate_001_ours.mp4",
+                "frames": 234,
+                "duration": 9.75,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 233,
+          "comparisonFrames": 234
+        },
+        {
+          "id": "003",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/ood/ellipsoid-plate_003_gt.mp4",
+              "poster": "videos/ood/posters/ellipsoid-plate_003_gt.jpg",
+              "frames": 234,
+              "fps": 24.0,
+              "duration": 9.75,
+              "width": 1920,
+              "height": 1080,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ood/ellipsoid-plate_003_gt.mp4",
+                "frames": 234,
+                "duration": 9.75,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/ood/ellipsoid-plate_003_ours.mp4",
+              "poster": "videos/ood/posters/ellipsoid-plate_003_ours.jpg",
+              "frames": 234,
+              "fps": 24.0,
+              "duration": 9.75,
+              "width": 1920,
+              "height": 1080,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ood/ellipsoid-plate_003_ours.mp4",
+                "frames": 234,
+                "duration": 9.75,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 233,
+          "comparisonFrames": 234
+        }
+      ]
+    },
+    {
+      "id": "mug-bullet",
+      "label": "Mug\u2013Bullet",
+      "description": "A projectile impacts a mug. Compare the local damage and subsequent object motion.",
+      "examples": [
+        {
+          "id": "0000",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/ood/mug-bullet_0000_gt.mp4",
+              "poster": "videos/ood/posters/mug-bullet_0000_gt.jpg",
+              "frames": 402,
+              "fps": 24.0,
+              "duration": 16.75,
+              "width": 1920,
+              "height": 1080,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ood/mug-bullet_0000_gt.mp4",
+                "frames": 402,
+                "duration": 16.75,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/ood/mug-bullet_0000_ours.mp4",
+              "poster": "videos/ood/posters/mug-bullet_0000_ours.jpg",
+              "frames": 402,
+              "fps": 24.0,
+              "duration": 16.75,
+              "width": 1920,
+              "height": 1080,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ood/mug-bullet_0000_ours.mp4",
+                "frames": 402,
+                "duration": 16.75,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 401,
+          "comparisonFrames": 402
+        },
+        {
+          "id": "0002",
+          "clips": [
+            {
+              "method": "gt",
+              "label": "Ground truth",
+              "src": "videos/ood/mug-bullet_0002_gt.mp4",
+              "poster": "videos/ood/posters/mug-bullet_0002_gt.jpg",
+              "frames": 402,
+              "fps": 24.0,
+              "duration": 16.75,
+              "width": 1920,
+              "height": 1080,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ood/mug-bullet_0002_gt.mp4",
+                "frames": 402,
+                "duration": 16.75,
+                "firstFrame": 0
+              }
+            },
+            {
+              "method": "ours",
+              "label": "Neural-PD",
+              "src": "videos/ood/mug-bullet_0002_ours.mp4",
+              "poster": "videos/ood/posters/mug-bullet_0002_ours.jpg",
+              "frames": 402,
+              "fps": 24.0,
+              "duration": 16.75,
+              "width": 1920,
+              "height": 1080,
+              "firstFrame": 0,
+              "original": {
+                "src": "videos/ood/mug-bullet_0002_ours.mp4",
+                "frames": 402,
+                "duration": 16.75,
+                "firstFrame": 0
+              }
+            }
+          ],
+          "frameStart": 0,
+          "frameEnd": 401,
+          "comparisonFrames": 402
+        }
+      ]
+    }
+  ]
+}
